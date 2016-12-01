@@ -1,53 +1,51 @@
-
 # react-native-httpserver
+
+A http server for react native that serves files from a `www` directory in your bundle.  
+Nice when you:  
+- want to load things into WebViews with 'http://' (instead of 'file://')  
+- want to use 'networked' images  
+
 
 ## Getting started
 
-`$ npm install react-native-httpserver --save`
-
-### Mostly automatic installation
-
-`$ react-native link react-native-httpserver`
-
-### Manual installation
-
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-httpserver` and add `RNHttpserver.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNHttpserver.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNHttpserverPackage;` to the imports at the top of the file
-  - Add `new RNHttpserverPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-httpserver'
-  	project(':react-native-httpserver').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-httpserver/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-httpserver')
-  	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNHttpserver.sln` in `node_modules/react-native-httpserver/windows/RNHttpserver.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Cl.Json.RNHttpserver;` to the usings at the top of the file
-  - Add `new RNHttpserverPackage()` to the `List<IReactPackage>` returned by the `Packages` method
+1. Clone this repo into your node_modules directory
+2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+3. Go to `node_modules` ➜ `react-native-httpserver` and add the `.xcodeproj` file
+4. In the XCode project navigator, select your project. Add `libRNHTTPServer.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+5. Click `RNHTTPServer.xcodeproj` in the project navigator, go to the `Build Settings` tab and make sure  `Header Search Paths` contains both `$(SRCROOT)/../../react-native/React` and `$(SRCROOT)/../../../React` - mark both as `recursive`.
+6. Create a folder called `www` in your project's top-level directory (usually next to your node_modules and index.js file), and put the files you want to access over http in there.  
+7. Add the `www` folder to Xcode (so it gets bundled with the app).
 
 
 ## Usage
-```javascript
-import RNHttpserver from 'react-native-httpserver';
 
-// TODO: What do with the module?
-RNHttpserver;
+All you need is to `require` the `react-native-httpserver` module and then call the `start` method, with a port.
+
+```javascript
+var http = require('react-native-httpserver');
+http.start("8999");
 ```
-  
+
+The toplevel URL then becomes `http://127.0.0.1:8999/index.html`, also accessible as `http.url()`.
+
+## Implementation
+
+Based on [MongooseDaemon](https://github.com/face/MongooseDaemon) and the [mongoose server](https://github.com/cesanta/mongoose)
+
+Mongoose is cross platform, so an Android version *should* be possible.
+
+## Changelog
+
+0.0.7	Added example project
+0.0.6	Added doc root option
+0.0.3	Published to npm  
+0.0.2	Replaced GCDWebServer with Mongoose  
+0.0.1	IPR
+
+## TODO
+
+- [x] Example project  
+- [ ] Android version  
+- [ ] Better docs  
+
+

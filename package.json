@@ -1,20 +1,85 @@
-
 {
-  "name": "react-native-httpserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "react-native"
+  "_args": [
+    [
+      {
+        "raw": "react-native-httpserver@0.0.7",
+        "scope": null,
+        "escapedName": "react-native-httpserver",
+        "name": "react-native-httpserver",
+        "rawSpec": "0.0.7",
+        "spec": "0.0.7",
+        "type": "version"
+      },
+      "/Users/than/WorkSpace/DtnDrive-Project/dtnApp-Tablet"
+    ]
   ],
-  "author": "",
-  "license": "",
-  "peerDependencies": {
-    "react-native": "^0.29.0",
-    "react-native-windows": "^0.29.0"
-
-  }
+  "_from": "react-native-httpserver@0.0.7",
+  "_id": "react-native-httpserver@0.0.7",
+  "_inCache": true,
+  "_location": "/react-native-httpserver",
+  "_nodeVersion": "4.2.2",
+  "_npmUser": {
+    "name": "baseio",
+    "email": "js@base.io"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_react-native": "^0.14.2",
+  "_requested": {
+    "raw": "react-native-httpserver@0.0.7",
+    "scope": null,
+    "escapedName": "react-native-httpserver",
+    "name": "react-native-httpserver",
+    "rawSpec": "0.0.7",
+    "spec": "0.0.7",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-httpserver/-/react-native-httpserver-0.0.7.tgz",
+  "_shasum": "6afe79a49fad453905ed183d320f0131df695f35",
+  "_shrinkwrap": null,
+  "_spec": "react-native-httpserver@0.0.7",
+  "_where": "/Users/than/WorkSpace/DtnDrive-Project/dtnApp-Tablet",
+  "author": {
+    "name": "Jorgen Skogmo",
+    "email": "js@base.io",
+    "url": "http://base.io"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/base.io/react-native-httpserver/issues"
+  },
+  "dependencies": {},
+  "description": "A http server for react native that serves files from a `www` directory in your bundle.   Nice when you:   - want to load things into WebViews with 'http://' (instead of 'file://')   - want to use 'networked' images",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6afe79a49fad453905ed183d320f0131df695f35",
+    "tarball": "https://registry.npmjs.org/react-native-httpserver/-/react-native-httpserver-0.0.7.tgz"
+  },
+  "gitHead": "a3a43b74c284a4acc604d856a070e83160e4844d",
+  "homepage": "https://gitlab.com/base.io/react-native-httpserver#README",
+  "keywords": [
+    "react-native",
+    "http",
+    "server",
+    "ios"
+  ],
+  "maintainers": [
+    {
+      "name": "baseio",
+      "email": "js@base.io"
+    }
+  ],
+  "name": "react-native-httpserver",
+  "nativePackage": true,
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/base.io/react-native-httpserver.git"
+  },
+  "scripts": {},
+  "version": "0.0.7"
 }
